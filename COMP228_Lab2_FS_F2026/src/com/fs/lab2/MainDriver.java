@@ -23,14 +23,14 @@ public class MainDriver {
 
 				Investments[i] = new Interest(rate, principal, time);
 				
-				System.out.println("Simple interest (BigDecimal): " + Investments[i].Sinterest(rate, principal, time));
-				System.out.println("Compound (BigDecimal): " + Investments[i].Cinterest(rate, principal, time));
+				System.out.printf("Simple interest (BigDecimal): $%.2f%n", Investments[i].Sinterest(rate, principal, time));
+				System.out.printf("Compound (BigDecimal): $%.2f%n", Investments[i].Cinterest(rate, principal, time));
 
 				// Double overloads
 				double r = rate.doubleValue();
 				double p = principal.doubleValue();
-				System.out.println("Simple interest (Double): " + Investments[i].Sinterest(r, p, time));
-				System.out.println("Compound interest (Double): " + Investments[i].Cinterest(r, p, time));
+				System.out.printf("Simple interest (Double): $%.2f%n", Investments[i].Sinterest(r, p, time));
+				System.out.printf("Compound interest (Double): $%.2f%n", Investments[i].Cinterest(r, p, time));
 
 			}
 
